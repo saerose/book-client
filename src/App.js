@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Scanner from './components/Scanner';
+import ScannerDashboard from './components/ScannerDashboard';
 
 class App extends Component {
   render() {
@@ -11,8 +11,8 @@ class App extends Component {
           <h1>BookZ</h1>
         </header>
         <div className="app-outerdiv">
-          This is where all goes.
-          <Scanner />
+          Content here
+          <ScannerDashboard />
         </div>
       </div>
     );

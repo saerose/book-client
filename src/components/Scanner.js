@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import Quagga from 'quagga';
-// import './App.css';
+import './Scanner.css';
+import { throws } from 'assert';
 
 class Scanner extends Component {
+  constructor(props) {
+    super(props);
+    /*propTypes: {
+        onDetected: React.PropTypes.func.isRequired
+    }, */
+  }
+
+  // onDetected = (result) => {
+  //   this.props.onDetected(result);
+  // }
 
   componentDidMount() {
     Quagga.init({
@@ -10,8 +21,8 @@ class Scanner extends Component {
         name: 'Live',
         type: 'LiveStream',
         constraints: {
-          // width: 640,
-          // height: 480,
+          width: 200,
+          height: 100,
           facing: "environment"
         }
       },
@@ -19,7 +30,8 @@ class Scanner extends Component {
         readers: [
           'code_128_reader'
         ]
-      }, function(err) {
+      },
+      function(err) {
         if (err) {
           console.log(err);
           return;
@@ -27,14 +39,19 @@ class Scanner extends Component {
         // console.log('Initialization finished. Ready to start');
         Quagga.start();
         }
-    })
+    });
+    // Quagga.onDetected(this.onDetected);
   }
+
+//   componentWillUnmount() {
+//     Quagga.offDetected(this._onDetected);
+// }
 
   render() {
     return (
       <div className="scanner">
         This is the scanner.
-        <div id="interactive" className="viewport"/>
+        <div id="interactive" className="viewport" />
       </div>
     );
   }
