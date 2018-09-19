@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import Quagga from 'quagga';
-import './Scanner.css';
-import { throws } from 'assert';
+import './Scanner.sass';
 
 class Scanner extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
     /*propTypes: {
         onDetected: React.PropTypes.func.isRequired
     }, */
-  }
 
   // onDetected = (result) => {
   //   this.props.onDetected(result);

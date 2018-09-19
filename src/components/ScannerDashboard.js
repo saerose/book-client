@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ScannerDashboard.css';
+import './ScannerDashboard.sass';
 
 import Scanner from './Scanner';
 
