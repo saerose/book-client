@@ -14,13 +14,14 @@ class App extends Component {
       <div className="App">
 
         <header className="App_header">
-          <h1>BookZ</h1>
+          <div className='App_header_MenuContainer'><MenuContainer /></div>
+          <div className='App_header_Title'>This is the title</div>
         </header>
-        <MenuContainer />
         <div className="App_outerdiv">
           Content here
           <ScannerDashboard />
         </div>
+
       </div>
     );
   }

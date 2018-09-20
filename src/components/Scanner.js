@@ -2,15 +2,22 @@ import React, { Component } from 'react';
 import Quagga from 'quagga';
 import '../components_sass/Scanner.sass';
 
-class Scanner extends Component {
-  // constructor(props) {
-  //   super(props);
-    /*propTypes: {
-        onDetected: React.PropTypes.func.isRequired
-    }, */
+// import { onDetected } from '../redux/actions';
 
-  onDetected = (result) => {
-    console.log('resutl', result);
+class Scanner extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      result: []
+    }
+  }
+
+  onDetectedTest = (result) => {
+    this.setState({
+      result: result.codeResult.code
+    });
+    // this.props.onDetected(result);
+    console.log('result', result);
   }
 
   componentDidMount() {
@@ -23,8 +30,8 @@ class Scanner extends Component {
         name: 'Live',
         type: 'LiveStream',
         constraints: {
-          width: 400,
-          height: 400,
+          width: 640,
+          height: 480,
           facingMode: 'environment'
         }
       },
@@ -46,26 +53,14 @@ class Scanner extends Component {
       locate: true,
     }, (err) => {
       if(err) {
+        Quagga.stop();
         console.error(err);
       } else {
         console.log('working');
       }
       Quagga.start();
     });
-    Quagga.onDetected(this.onDetected); //if this._onDetected it brokes
-    // Quagga.onProcessed(function (result) {
-    //   const drawingCtx = Quagga.ctx.overlay;
-    //   const drawingCanvas = Quagga.canvas.dom.overlay;
-
-    //   if (result) {
-    //     if (result.boxes) {
-    //       drawingCtx.clearRect(0, 0, parseInt(drawingCanvas.getAttribute('width')), parseInt(drawingCanvas.getAttribute('height')));
-    //       result.boxes.filter(box => box !== result.box).forEach(box => {
-    //         Quagga.ImageDebug.drawPath(box, {x: 0, y: 1}, drawingCtx, {color: "green", lineWidth: 2});
-    //       });
-    //     }
-    //   }
-    // })
+    Quagga.onDetected(this.onDetectedTest); //if this._onDetected it brokes
   }
 
   componentWillUnmount() {
@@ -75,18 +70,11 @@ class Scanner extends Component {
   render() {
     console.log('render');
     return (
-      <div className="Scanner">
-        This is the scanner.
-        <div id="interactive" className="viewport">
-          {/* <video
-            className='videoCamera'
-            autoPlay= {true}
-            preload='auto'
-            muted= {true}
-            playsInline= {true}>
-          </video>
-          <canvas className='drawingBuffer'></canvas> */}
-        </div>
+      <div>
+      <div className='Scanner'>
+        <div id="interactive" className="viewport" />
+      </div>
+      <div>This is the code: {this.state.result}</div>
       </div>
     );
   }

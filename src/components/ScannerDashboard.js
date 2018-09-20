@@ -26,8 +26,8 @@ class ScannerDashboard extends Component {
       <div className="ScannerDashboard">
         <div className="ScannerDashboard_content">
           <Scanner />
-          <button className='ScannerDashboard_content_button'
-                  onClick={this.scan}> {this.state.scanning ? 'Stop' : 'Start'} </button>
+          {/* <button className='ScannerDashboard_content_button'
+                  onClick={this.scan}> {this.state.scanning ? 'Stop' : 'Start'} </button> */}
                 <ul className="results">
                     {this.state.results.map((result) => (<Result key={result.codeResult.code} result={result} />))}
                 </ul>

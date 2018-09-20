@@ -1,0 +1,1 @@
+export const ON_DETECTED = 'ON_DETECTED'
