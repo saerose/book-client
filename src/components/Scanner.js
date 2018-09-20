@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Quagga from 'quagga';
 import '../components_sass/Scanner.sass';
 
-// import { onDetected } from '../redux/actions';
-
 class Scanner extends Component {
   constructor(props) {
     super(props);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Result.css';
+import '../components_sass/Result.sass';
 
 class Result extends Component {
 
@@ -7,12 +7,13 @@ class Result extends Component {
     const result = this.props.result;
 
     if (!result) {
+      console.log('Null');
       return null;
     }
 
     return (
       <div className="Result_outerdiv">
-      {result.codeResult.code}
+      Result: {result.codeResult.code}
       {/* [{result.codeResult.format}] */}
       </div>
     );

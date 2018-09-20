@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.sass';
 
-import ScannerDashboard from './components/ScannerDashboard';
+import Scanner from './components/Scanner';
 import MenuContainer from './components/MenuContainer'
+import ScannerDashboard from './components/ScannerDashboard';
 
 class App extends Component {
   showSettings (event) {
@@ -18,7 +19,7 @@ class App extends Component {
           <div className='App_header_Title'>This is the title</div>
         </header>
         <div className="App_outerdiv">
-          Content here
+          This is the general App where all content goes.
           <ScannerDashboard />
         </div>
 

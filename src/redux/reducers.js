@@ -1,10 +1,11 @@
+import { combineReducers } from 'redux';
 import { ON_DETECTED } from './actionTypes'
 
 const defaultState = {
   results: []
 };
 
-const onDetected = (state = defaultState, action) => {
+const onDetectedReducer = (state = defaultState, action) => {
   switch(action.type) {
     case ON_DETECTED:
       return {
@@ -16,4 +17,9 @@ const onDetected = (state = defaultState, action) => {
   }
 }
 
-export default onDetected;
+//Combining all reducers.
+const reducers = combineReducers({
+  onDetectedReducer
+});
+
+export default reducers;
