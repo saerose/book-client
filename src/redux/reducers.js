@@ -17,7 +17,7 @@ const onDetectedReducer = (state = defaultState, action) => {
   }
 }
 
-//Combining all reducers.
+// Combining all reducers.
 const reducers = combineReducers({
   onDetectedReducer
 });

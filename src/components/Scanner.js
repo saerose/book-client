@@ -11,10 +11,7 @@ class Scanner extends Component {
   }
 
   onDetectedTest = (result) => {
-    this.setState({
-      result: result.codeResult.code
-    });
-    // this.props.onDetected(result);
+    this.props.detectedCallback(result.codeResult.code)
     console.log('result', result);
   }
 
@@ -58,7 +55,7 @@ class Scanner extends Component {
       }
       Quagga.start();
     });
-    Quagga.onDetected(this.onDetectedTest); //if this._onDetected it brokes
+    Quagga.onDetected(this.onDetectedTest);
   }
 
   componentWillUnmount() {
@@ -72,7 +69,7 @@ class Scanner extends Component {
       <div className='Scanner'>
         <div id="interactive" className="viewport" />
       </div>
-      <div>This is the code: {this.state.result}</div>
+      <div>Scanner Component — This is the code: </div>
       </div>
     );
   }

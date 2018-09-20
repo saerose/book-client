@@ -13,7 +13,11 @@ class ScannerDashboard extends Component {
       scanning: false,
       results: []
     }
-    let isbn = 1781101310
+  }
+
+  // Receives isbn and sends to API.
+  //Scanner — we are sending it in the props.
+  executeFetch = (isbn) => {
     const BASE_URL = 'https://www.googleapis.com/books/v1/volumes?q=isbn:'
     fetch(BASE_URL + isbn)
       .then(results => results.json())
@@ -34,7 +38,7 @@ class ScannerDashboard extends Component {
       <div className="ScannerDashboard">
         <div className="ScannerDashboard_content">
         This is the scanner dashboard.
-          <Scanner />
+          <Scanner detectedCallback={this.executeFetch} />
           {/* <button className='ScannerDashboard_content_button'
                   onClick={this.scan}> {this.state.scanning ? 'Stop' : 'Start'} </button> */}
                 {/* <ul className="results">
