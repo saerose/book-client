@@ -4,9 +4,9 @@ import '../components_sass/MenuButton.sass'
 class MenuButton extends Component {
   render() {
     return(
-      <button className='menuButton' onMouseDown={this.props.handleMouseDown}>
-        <span>🐳</span>
-      </button>
+      <div className='menuButton' onMouseDown={this.props.handleMouseDown}>
+        <h2>🐳</h2>
+      </div>
     );
   }
 }

@@ -43,6 +43,7 @@ class ScannerDashboard extends Component {
                 {this.state.scanning ? <Scanner onDetected={this._onDetected}/> : null} */}
         </div>
         <div className='ScannerDashboard_result'><Result /></div>
+        <div>Please render something</div>
       </div>
     );
   }

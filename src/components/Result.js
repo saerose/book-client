@@ -15,6 +15,7 @@ class Result extends Component {
       <div className="Result_outerdiv">
       Result: {result.codeResult.code}
       {/* [{result.codeResult.format}] */}
+      <div>RESULT</div>
       </div>
     );
   }
