@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import '../components_sass/Menu.sass';
 import '../components_sass/Home.sass';
 
-import noteBookImg from '../assets/diary.svg';
+import openBook from '../assets/open-book.svg';
 // const noteBookImg = require('../assets/diary.svg');
 
 
@@ -12,8 +12,10 @@ class Home extends Component {
     return(
       <div className='Home_wrapper'>
         <div className='Home_wrapper_title'>Ello Bello</div>
-        <div className='Home_wrapper_text'>This is the text from home page.</div>
-        <img className='Home_wrapper_img' alt='NoteBookImg' src={noteBookImg} />
+        <div className='Home_wrapper_text'>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?
+          </div>
+        <img className='Home_wrapper_img' alt='OpenBook' src={openBook} />
       </div>
     )
   }

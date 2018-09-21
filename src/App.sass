@@ -6,13 +6,13 @@
   flex-wrap: $wrap
 
 .App
-  text-align: center
+  text-align: left
 
 .App_header
-  background-color: #33354C
-  height: 2vh
+  height: 6vh
   padding: 15px
   color: white
+  background-color: #FFEFDD
   +flex($direction: row, $justify:space-around)
 
 .App_header_MenuContainer
@@ -23,16 +23,19 @@ input[type='text']
   +flex($direction:column)
   font-size: 1em
   background-color: pearl
-  width: 75vw
+  width: 60vw
   height: 6vh
   border-radius: 20px
   border: none;
+  padding-left: 50px;
 
-  background-image: url(assets/book.svg)
+  background-image: url(assets/search-book.svg)
   background-repeat: no-repeat
-  background-position: center left
+  background-position: 10px;
   background-size: 10%
 
+input[type='text']:focus
+  outline: none
 
 .App_header_SearchBar::placeholder
   padding: 10px 50px

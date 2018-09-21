@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import '../components_sass/MenuButton.sass'
-import menu from '../assets/menu.svg';
+import menu from '../assets/list.svg';
 
 
 class MenuButton extends Component {

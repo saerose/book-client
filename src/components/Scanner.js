@@ -65,10 +65,10 @@ class Scanner extends Component {
   render() {
     console.log('render');
     return (
-      <div>
-      <div className='Scanner'>
-        <div id="interactive" className="viewport" />
-      </div>
+      <div className='Scanner_wrapper'>
+        <div className='Scanner_wrapper_video'>
+          <div id="interactive" className="viewport" />
+        </div>
       <div>Scanner Component — This is the code: </div>
       </div>
     );
