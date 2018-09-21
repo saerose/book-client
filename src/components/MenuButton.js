@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import '../components_sass/MenuButton.sass'
+import menu from '../assets/menu.svg';
+
 
 class MenuButton extends Component {
   render() {
     return(
-      <div className='menuButton' onMouseDown={this.props.handleMouseDown}>
-        <p>🐳</p>
+      <div className='menuButton_wrapper' onMouseDown={this.props.handleMouseDown}>
+        <img className='flyoutMenu_img' alt='Menu' src={menu} />
       </div>
     );
   }

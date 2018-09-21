@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import MenuContainer from './MenuContainer';
 import '../components_sass/Menu.sass';
 import '../components_sass/Home.sass';
 
+import noteBookImg from '../assets/diary.svg';
 // const noteBookImg = require('../assets/diary.svg');
 
 
@@ -11,7 +11,9 @@ class Home extends Component {
 
     return(
       <div className='Home_wrapper'>
-        This is the home.
+        <div className='Home_wrapper_title'>Ello Bello</div>
+        <div className='Home_wrapper_text'>This is the text from home page.</div>
+        <img className='Home_wrapper_img' alt='NoteBookImg' src={noteBookImg} />
       </div>
     )
   }

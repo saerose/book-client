@@ -16,15 +16,13 @@ class App extends Component {
 
   render() {
     return (
-        <Router>
-          <div>
+      <Router>
+        <div>
+          <div className="App_header">
+            <div className='App_header_MenuContainer'><MenuContainer /></div>
+            <input type="text" className='App_header_SearchBar' placeholder='Search your next lecture!' />
+          </div>
 
-            <div className="App_header">
-              <div className='App_header_MenuContainer'><MenuContainer /></div>
-              <div className='App_header_Title'>This is the title</div>
-            </div>
-
-      {/* <Router> */}
           <div>
             <Route exact path='/' component={Home}/>
             <Route path='/scannerdashboard' component={ScannerDashboard}/>
