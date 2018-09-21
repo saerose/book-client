@@ -19,7 +19,7 @@
   +flex()
   background-color: aliceblue
 
-.App_header_SearchBar
+input[type='text']
   +flex($direction:column)
   font-size: 1em
   background-color: pearl
@@ -28,9 +28,14 @@
   border-radius: 20px
   border: none;
 
-.App_header_SearchBar::placeholder
-  padding: 10px
+  background-image: url(assets/book.svg)
+  background-repeat: no-repeat
+  background-position: center left
+  background-size: 10%
 
+
+.App_header_SearchBar::placeholder
+  padding: 10px 50px
 
 
 

@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
-import '../components_sass/Menu.sass';
+import '../components_sass/MenuProfile.sass';
 import home from '../assets/house.svg';
 import camera from '../assets/camera.svg';
 import books from '../assets/book.svg';
+
+import MenuProfile from "./MenuProfile";
 
 
 
@@ -21,7 +23,7 @@ class Menu extends Component {
           onMouseDown={this.props.handleMouseDown}
           className={visibility}>
 
-        <div className='flyoutMenu_profile'>This is the profile part.</div>
+        <MenuProfile />
 
         <div className='flyoutMenu_divWrapper'>
           <li className='flyoutMenu_li'>
