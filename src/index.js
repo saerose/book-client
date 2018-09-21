@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.sass';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 import { Provider } from 'react-redux';
@@ -16,11 +16,10 @@ let store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ &&
 
   ReactDOM.render(
     <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      {/* <Router> */}
+        <App/>
+      {/* </Router> */}
     </Provider>,
     document.getElementById('root')
   );
-
   registerServiceWorker();

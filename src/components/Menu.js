@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { BrowserRouter as Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
-import '../components_sass/Menu.sass'
+import '../components_sass/Menu.sass';
 
 class Menu extends Component {
   render() {
@@ -16,10 +16,12 @@ class Menu extends Component {
           onMouseDown={this.props.handleMouseDown}
           className={visibility}>
 
-        <h2><Link to='/'>🏛</Link></h2>
-        <h2><Link to='/scannerdashboard'>🐙</Link></h2>
-        <h2><Link to='/scannerdashboard'>🐛</Link></h2>
-        <h2><Link to='/scannerdashboard'>🦁</Link></h2>
+        <ul>
+          <li><Link to='/'>🏛</Link></li>
+          <li><Link to='/scannerdashboard'>🙈</Link></li>
+          <li><Link to='/scannerdashboard'>🙉</Link></li>
+          <li><Link to='/scannerdashboard'>🙊</Link></li>
+        </ul>
 
       </div>
     )

@@ -31,7 +31,7 @@ class MenuContainer extends Component {
   render() {
     return (
     <div className='menu_wrapper'>
-      <MenuButton handleMouseDown={this.handleMouseDown} />
+       <MenuButton handleMouseDown={this.handleMouseDown} />
 
       <Menu handleMouseDown={this.handleMouseDown}
             menuVisibility={this.state.visible} />

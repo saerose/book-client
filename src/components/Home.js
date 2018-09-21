@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-
+import MenuContainer from './MenuContainer';
 import '../components_sass/Menu.sass';
 import '../components_sass/Home.sass';
+
+// const noteBookImg = require('../assets/diary.svg');
+
 
 class Home extends Component {
   render() {

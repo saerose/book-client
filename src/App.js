@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.sass';
 
 import MenuContainer from './components/MenuContainer'
@@ -16,16 +16,20 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className='Wrapper'>
-          <header className="App_header">
-            <div className='App_header_MenuContainer'><MenuContainer /></div>
-            <div className='App_header_Title'>This is the title</div>
-          </header>
+        <Router>
+          <div>
 
-          <Route exact path='/' component={Home} />
-          <Route path='/scannerdashboard' component={ScannerDashboard} />
-          <Route path='/result' component={Result} />
+            <div className="App_header">
+              <div className='App_header_MenuContainer'><MenuContainer /></div>
+              <div className='App_header_Title'>This is the title</div>
+            </div>
+
+      {/* <Router> */}
+          <div>
+            <Route exact path='/' component={Home}/>
+            <Route path='/scannerdashboard' component={ScannerDashboard}/>
+            <Route path='/result' component={Result}/>
+          </div>
         </div>
       </Router>
     );

@@ -5,7 +5,7 @@ class MenuButton extends Component {
   render() {
     return(
       <div className='menuButton' onMouseDown={this.props.handleMouseDown}>
-        <h2>🐳</h2>
+        <p>🐳</p>
       </div>
     );
   }
