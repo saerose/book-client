@@ -1,14 +1,11 @@
+@import '../index'
+
 .menuButton_wrapper
   transition: all .2s cubic-bezier(0, 1.26, .8, 1.28)
+  +flex($justify: center, $align: center)
 
 .flyoutMenu_img
-  display: block
-  // margin: 10px auto 10px auto
-  // margin: auto
-  display: flex
-  justify-content: center
-  align-content: center
-  align-items: center
-  // +flex($justify: center, $align: center)
-  width: 60%
-  background-color: yellow
+  margin: auto
+  width: 50%
+  fill: red
+  +flex($align: center)

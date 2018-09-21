@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import { Link } from 'react-router-dom';
 
-import profileBase from '../assets/black-cat.svg';
+import profileBase from '../assets/man.svg';
 
 
 class MenuProfile extends Component {

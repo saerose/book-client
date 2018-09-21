@@ -38,7 +38,6 @@ class ScannerDashboard extends Component {
       <div className="ScannerDashboard">
         <div className="ScannerDashboard_content">
         This is the scanner dashboard.
-        Ello
           <Scanner detectedCallback={this.executeFetch} />
           {/* <button className='ScannerDashboard_content_button'
                   onClick={this.scan}> {this.state.scanning ? 'Stop' : 'Start'} </button> */}
@@ -48,7 +47,6 @@ class ScannerDashboard extends Component {
                 {this.state.scanning ? <Scanner onDetected={this._onDetected}/> : null} */}
         </div>
         <div className='ScannerDashboard_result'><Result /></div>
-        <div>Please render something</div>
       </div>
     );
   }

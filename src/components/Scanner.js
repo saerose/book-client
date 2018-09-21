@@ -25,8 +25,8 @@ class Scanner extends Component {
         name: 'Live',
         type: 'LiveStream',
         constraints: {
-          width: 640,
-          height: 480,
+          width: 480,
+          height: 640,
           facingMode: 'environment'
         }
       },
@@ -60,6 +60,7 @@ class Scanner extends Component {
 
   componentWillUnmount() {
     Quagga.offDetected(this._onDetected);
+    Quagga.stop();
 }
 
   render() {
