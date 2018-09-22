@@ -37,16 +37,19 @@ class Menu extends Component {
           <li className='flyoutMenu_li'>
             <Link to='/scannerdashboard'>
             <img className='flyoutMenu_li_img' alt='Scan' src={camera} />
+            <div className='flyoutMenu_li_name'>Scan</div>
             </Link>
           </li>
           <li className='flyoutMenu_li'>
             <Link to='/scannerdashboard'>
             <img className='flyoutMenu_li_img' alt='Books' src={books} />
+            <div className='flyoutMenu_li_name'>Library</div>
             </Link>
           </li>
           <li className='flyoutMenu_li'>
             <Link to='/scannerdashboard'>
             <img className='flyoutMenu_li_img' alt='Scan' src={camera} />
+            <div className='flyoutMenu_li_name'>Stuff</div>
             </Link>
           </li>
         </div>

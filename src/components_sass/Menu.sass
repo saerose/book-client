@@ -28,29 +28,24 @@
   margin-top: 135%;
 
 .flyoutMenu_li
-  +flex($direction: column, $justify: center)
+  +flex($direction: row, $justify: center)
   background-color: #645375
   border-bottom: 2px solid red
 
-.flyoutMenu_li a
+#flyoutMenu a, a:link, a:visited
   text-decoration: none
+  color: #FFEFDD
 
-.flyoutMenu_li::hover
-  background-color: red
+#flyoutMenu a:hover
+  background-color: white
 
 .flyoutMenu_li_name
-  +flex($direction: column, $justify: center, $align: center)
+  +flex($direction: row, $justify: center)
+  margin: 10px auto 10px auto
 
 .flyoutMenu_li_img
-  +flex($direction: column)
+  +flex($direction: row)
   padding: 5px
   display: block
   margin: 10px auto 10px auto
   width: 30%
-
-  // #flyoutMenu h2 a
-//   color: #333
-//   margin-left: 15px
-//   text-decoration: none
-// #flyoutMenu h2 a:hover
-//   text-decoration: underline
