@@ -14,22 +14,26 @@ class Result extends Component {
     if (result) {
       console.log('Result working')
       return (
-        <div className="Result_outerdiv">
-        <div className="Result_Img_outerdiv">
-          <img className='Result_Img' src={result.volumeInfo.imageLinks.thumbnail} />
+        <div>
+
+        <div className="Result_topinfo_outerdiv">
+          <div className="Result_img_outerdiv">
+            <img className='Result_img' src={result.volumeInfo.imageLinks.thumbnail} />
+            <div className='Result_topinfo_wrapper'>
+              <div className='Result_topinfo_wrapper_categories'>{result.volumeInfo.categories}</div>
+              <div className='Result_topinfo_wrapper_title'>{result.volumeInfo.title}</div>
+              <div className='Result_topinfo_wrapper_authors'>by {result.volumeInfo.authors}</div>
+              <div className='Result_topinfo_wrapper_rating'>Rating: {result.volumeInfo.averageRating}</div>
+            </div>
+          </div>
         </div>
-          <div className='Result_Title'>{result.volumeInfo.title}</div>
-          <div className='Result_Subtitle'>{result.volumeInfo.subtitle}</div>
-          <div className='Result_Author'>by {result.volumeInfo.authors}</div>
 
-          <div className='Result_TextSnippet'>{result.searchInfo.textSnippet}</div>
-
-
-
-          <div className='Result_averageRating'>Rating: {result.volumeInfo.averageRating}</div>
-
-
+        <div className='Result_bottominfo_outerdiv'>
+          <div className='Result_bottominfo_sinopsis'>SYNOPSIS</div>
+          <div className='Result_TextSnippet'>" {result.searchInfo.textSnippet} "</div>
         </div>
+      </div>
+
       );
     } else {
       console.log('Null');

@@ -1,3 +1,5 @@
+@import '../index'
+
 .Result_null
   padding: 20px
   text-align: center
@@ -12,35 +14,52 @@
   text-align: center
   font-size: 1em
 
-.Result_Img_outerdiv
+.Result_topinfo_outerdiv
   background-color: yellow
+  height: 24vh
 
-.Result_Img
-  width: 60%
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.Result_img_outerdiv
+  +flex()
+
+.Result_img
+  +flex($direction: column, $justify: space-around)
+  width: 40%
+  height: 40%
   padding: 10px;
 
-
-.Result_Title
+.Result_topinfo_wrapper
+  +flex($direction: column)
   color: #997A77
-  font-size: 3em
   padding: 10px
   background-color: pink
 
-.Result_Subtitle
-  color: #997A77
-  background-color: lavender
+.Result_topinfo_wrapper_title
+  font-size: 2em
+  margin-top: -6px
+  font-weight: 700
 
-.Result_Author
-  color: #997A77
-  background-color: lavenderblush
+
+.Result_topinfo_wrapper_categories
+  font-weight: 300
+
+.Result_topinfo_wrapper_authors
+  font-style: italic
+  font-size: .9em
+  margin-top: -6px
+
+.Result_topinfo_wrapper_rating
+  background-color: lightsteelblue
+  margin-top: 10px
+
+.Result_bottominfo_outerdiv
+  padding-top: 80px
+
+.Result_bottominfo_sinopsis
+  padding-left: 20px
+  font-size: 2em
 
 .Result_TextSnippet
+  padding: 20px
   color: #997A77
-  background-color: indianred
-
-.Result_averageRating
-  color: #997A77
-  background-color: thistle
+  font-style: italic
+  background-color: lavender
