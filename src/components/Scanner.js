@@ -13,6 +13,7 @@ class Scanner extends Component {
   onDetectedTest = (result) => {
     this.props.detectedCallback(result.codeResult.code)
     console.log('result', result);
+    console.log('result 2.0', result.codeResult.code);
   }
 
   componentDidMount() {
@@ -36,14 +37,26 @@ class Scanner extends Component {
       },
       numOfWorkers: 2,
       decoder: {
-        readers: [{
-          format: "ean_reader",
-          config: {
-              supplements: [
-                  'ean_5_reader', 'ean_2_reader'
-              ]
-          }
-        }]
+        readers: [
+          // 'code_128_reader',
+          'ean_reader',
+          // 'code_39_reader',
+          // 'code_30_vin_reader',
+          // 'codabar_reader',
+          // 'upc_reader',
+          // 'upc_e_reader',
+          // 'i2of5_reader',
+          // '2of5_reader',
+          // 'code_93_reader'
+          // {
+          // format: "ean_reader",
+          // config: {
+          //     supplements: [
+          //         'ean_5_reader', 'ean_2_reader'
+          //     ]
+          //   }
+          // }
+        ]
       },
       locate: true,
     }, (err) => {
@@ -59,7 +72,7 @@ class Scanner extends Component {
   }
 
   componentWillUnmount() {
-    Quagga.offDetected(this._onDetected);
+    Quagga.offDetected(this.onDetected); //_onDetected
     Quagga.stop();
 }
 
@@ -70,7 +83,6 @@ class Scanner extends Component {
         <div className='Scanner_wrapper_video'>
           <div id="interactive" className="viewport" />
         </div>
-      <div>Scanner Component — This is the code: </div>
       </div>
     );
   }

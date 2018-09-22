@@ -1,5 +1,7 @@
+@import '../index'
+
 #flyoutMenu
-  width: 20vw
+  width: 30vw
   height: 100vh
   background-color: #645375
   position: fixed
@@ -16,22 +18,39 @@
   transform: translate3d(0vw, 0, 0)
   overflow: hidden
 
-.flyoutMenu_profile
-  background-color: #33354C
-  position: absolute
-  margin: 0
-  top: 0
+.flyoutMenu_MenuProfileWrapper
+  background-color: red
+  +flex($direction: column, $justify: center)
 
 .flyoutMenu_divWrapper
+  +flex($direction: column)
   list-style-type: none
-  margin-top: 150%;
+  margin-top: 135%;
+
+.flyoutMenu_li
+  +flex($direction: column, $justify: center)
+  background-color: #645375
+  border-bottom: 2px solid red
 
 .flyoutMenu_li a
-  text-decoration: none;
+  text-decoration: none
+
+.flyoutMenu_li::hover
+  background-color: red
+
+.flyoutMenu_li_name
+  +flex($direction: column, $justify: center, $align: center)
 
 .flyoutMenu_li_img
-  padding: 10px
+  +flex($direction: column)
+  padding: 5px
   display: block
   margin: 10px auto 10px auto
-  width: 50%
+  width: 30%
 
+  // #flyoutMenu h2 a
+//   color: #333
+//   margin-left: 15px
+//   text-decoration: none
+// #flyoutMenu h2 a:hover
+//   text-decoration: underline

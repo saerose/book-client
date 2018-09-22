@@ -10,6 +10,7 @@ class MenuProfile extends Component {
     return(
         <div className='flyoutMenu_profile'>
           <img className='flyoutMenu_profile_img' alt='Profile' src={profileBase} />
+          <div className='flyoutMenu_profile_name'>Your Name</div>
         </div>
     )
   }

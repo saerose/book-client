@@ -23,12 +23,15 @@ class Menu extends Component {
           onMouseDown={this.props.handleMouseDown}
           className={visibility}>
 
-        <MenuProfile />
+        <div className='flyoutMenu_MenuProfileWrapper'>
+          <MenuProfile />
+        </div>
 
         <div className='flyoutMenu_divWrapper'>
           <li className='flyoutMenu_li'>
             <Link to='/'>
               <img className='flyoutMenu_li_img' alt='Home' src={home} />
+              <div className='flyoutMenu_li_name'>Home</div>
             </Link>
           </li>
           <li className='flyoutMenu_li'>

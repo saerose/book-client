@@ -18,10 +18,13 @@ class ScannerDashboard extends Component {
   // Receives isbn and sends to API.
   //Scanner — we are sending it in the props.
   executeFetch = (isbn) => {
+    console.log('this is the fetch', isbn)
     const BASE_URL = 'https://www.googleapis.com/books/v1/volumes?q=isbn:'
-    fetch(BASE_URL + isbn)
+    const apiKey = 'AIzaSyAPODoh7pbgRTLTAWlaQkFBbqbTadJsz1U'
+    fetch(BASE_URL + isbn + '&key=' + apiKey)
       .then(results => results.json())
-      .then(result => this.props.onDetectedReducer(result))
+      .then(console.log)
+      .then(results => this.props.onDetectedReducer(results))
   }
 
   // _scan = () => {
@@ -45,7 +48,6 @@ class ScannerDashboard extends Component {
                 </ul>
                 {this.state.scanning ? <Scanner onDetected={this._onDetected}/> : null} */}
         </div>
-        {/* <div className='ScannerDashboard_result'><Result /></div> */}
       </div>
     );
   }

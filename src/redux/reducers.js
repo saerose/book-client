@@ -13,8 +13,8 @@ const onDetectedReducer = (state = defaultState, action) => {
         results: action.result
       }
     default:
-      return state;
   }
+    return state;
 }
 
 // Combining all reducers.
