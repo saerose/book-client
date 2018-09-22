@@ -10,8 +10,16 @@ class Result extends Component {
 
   render() {
     const result = this.props.results;
-
-    if (!result) {
+    console.log('within result.js', this.props.results)
+    if (result) {
+      console.log('Result working')
+      return (
+        <div className="Result_outerdiv">
+          {console.log('InsideResult div')}
+          Result: {result.volumeInfo.title}
+        </div>
+      );
+    } else {
       console.log('Null');
       return (
         <div className='Result_null'>
@@ -19,20 +27,13 @@ class Result extends Component {
           <div className='Result_null_img'>There is no result.</div>
         </div>
       );
-    } else {
-    console.log('Result working')
-    return (
-      <div className="Result_outerdiv">
-      Result: {result.items.volumeInfo.title}
-      </div>
-    );
     }
   }
 
 }
 
 const mapStateToProps = (state) => ({
-  results: state.results
+  results: state.onDetectedReducer.results
 })
 
 // const mapDispatchToProps = (dispatch) => ({

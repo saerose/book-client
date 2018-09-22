@@ -38,16 +38,7 @@ class Scanner extends Component {
       numOfWorkers: 2,
       decoder: {
         readers: [
-          // 'code_128_reader',
           'ean_reader',
-          // 'code_39_reader',
-          // 'code_30_vin_reader',
-          // 'codabar_reader',
-          // 'upc_reader',
-          // 'upc_e_reader',
-          // 'i2of5_reader',
-          // '2of5_reader',
-          // 'code_93_reader'
           // {
           // format: "ean_reader",
           // config: {
@@ -76,8 +67,10 @@ class Scanner extends Component {
     Quagga.stop();
 }
 
+// if scanner onDetected (detects stuff) = Link To result
+
   render() {
-    console.log('render');
+    console.log('scanner render');
     return (
       <div className='Scanner_wrapper'>
         <div className='Scanner_wrapper_video'>

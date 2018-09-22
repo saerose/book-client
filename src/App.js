@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
+import history from './history';
 import './App.sass';
 
 import MenuContainer from './components/MenuContainer'
@@ -16,7 +17,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router history={history}>
         <div>
           <div className="App_header">
             <div className='App_header_MenuContainer'><MenuContainer /></div>

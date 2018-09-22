@@ -18,34 +18,31 @@
   transform: translate3d(0vw, 0, 0)
   overflow: hidden
 
-.flyoutMenu_MenuProfileWrapper
-  background-color: red
-  +flex($direction: column, $justify: center)
-
-.flyoutMenu_divWrapper
-  +flex($direction: column)
-  list-style-type: none
-  margin-top: 135%;
-
-.flyoutMenu_li
-  +flex($direction: row, $justify: center)
-  background-color: #645375
-  border-bottom: 2px solid red
-
 #flyoutMenu a, a:link, a:visited
+  +flex()
   text-decoration: none
   color: #FFEFDD
 
 #flyoutMenu a:hover
   background-color: white
 
+.flyoutMenu_MenuProfileWrapper
+  +flex($direction: column, $justify: center)
+
+.flyoutMenu_divWrapper
+  list-style-type: none
+  margin-top: 135%;
+
+.flyoutMenu_li
+  background-color: #645375
+  border-bottom: 2px solid #33354C
+
 .flyoutMenu_li_name
-  +flex($direction: row, $justify: center)
+  +flex($direction: row, $justify: center, $align: center)
   margin: 10px auto 10px auto
 
 .flyoutMenu_li_img
-  +flex($direction: row)
+  // +flex($direction: row, $justify: center, $align: center)
   padding: 5px
-  display: block
   margin: 10px auto 10px auto
   width: 30%

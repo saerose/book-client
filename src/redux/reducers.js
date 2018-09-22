@@ -6,6 +6,8 @@ const defaultState = {
 };
 
 const onDetectedReducer = (state = defaultState, action) => {
+  console.log('redux state', state)
+  console.log('redux action', action)
   switch(action.type) {
     case ON_DETECTED:
       return {
@@ -13,8 +15,8 @@ const onDetectedReducer = (state = defaultState, action) => {
         results: action.result
       }
     default:
+      return state;
   }
-    return state;
 }
 
 // Combining all reducers.
