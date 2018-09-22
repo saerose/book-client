@@ -20,29 +20,34 @@
 
 #flyoutMenu a, a:link, a:visited
   +flex()
+  height: 8vh
   text-decoration: none
-  color: #FFEFDD
+  color: #FFC37F
 
-#flyoutMenu a:hover
-  background-color: white
+// #flyoutMenu a:hover
+//   background-color: white
 
 .flyoutMenu_MenuProfileWrapper
   +flex($direction: column, $justify: center)
 
 .flyoutMenu_divWrapper
   list-style-type: none
-  margin-top: 135%;
+  margin-top: 135%
 
 .flyoutMenu_li
   background-color: #645375
   border-bottom: 2px solid #33354C
 
+.flyoutMenu_li:hover
+  background-color: white
+
+
 .flyoutMenu_li_name
-  +flex($direction: row, $justify: center, $align: center)
-  margin: 10px auto 10px auto
+  +flex($direction: row, $justify: flex-start, $align: center)
+  margin: 10px auto 10px 0px
 
 .flyoutMenu_li_img
-  // +flex($direction: row, $justify: center, $align: center)
   padding: 5px
   margin: 10px auto 10px auto
   width: 30%
+  color: white
