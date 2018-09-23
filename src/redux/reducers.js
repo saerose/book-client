@@ -1,10 +1,14 @@
 import { combineReducers } from 'redux';
-import { ON_DETECTED, ON_SEARCH } from './actionTypes'
+import { ON_DETECTED, ON_SEARCH, LOG_IN } from './actionTypes'
 
 const defaultState = {
   results: {},
   list: []
 };
+
+const defaultUserState = {
+  user: {}
+}
 
 const onDetectedReducer = (state = defaultState, action) => {
   switch(action.type) {
@@ -28,9 +32,22 @@ const onDetectedReducer = (state = defaultState, action) => {
   }
 }
 
+const userReducer = (state = defaultUserState, action) => {
+  switch(action.type) {
+    case LOG_IN:
+      return {
+        ...state,
+        user: action.user
+      }
+    default:
+      return state;
+  }
+}
+
 // Combining all reducers.
 const reducers = combineReducers({
-  onDetectedReducer
+  onDetectedReducer,
+  userReducer
 });
 
 export default reducers;
