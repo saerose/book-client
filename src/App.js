@@ -7,6 +7,7 @@ import ScannerDashboard from './components/ScannerDashboard';
 import Result from './components/Result';
 import Home from './components/Home';
 import SearchBar from './components/SearchBar';
+import SearchBarResults from './components/SearchBarResults';
 
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
             <Route exact path='/' component={Home}/>
             <Route path='/scannerdashboard' component={ScannerDashboard}/>
             <Route path='/result' component={Result}/>
+            <Route path='/searchbarres' component={SearchBarResults} />
           </div>
         </div>
       </Router>

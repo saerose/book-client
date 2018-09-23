@@ -6,25 +6,30 @@ import '../components_sass/Home.sass';
 
 import MenuContainer from './MenuContainer';
 import { onSearch } from '../redux/actions';
-
+import history from '../history';
 
 class SearchBar extends Component {
   API_URL = 'https://www.googleapis.com/books/v1/volumes?q='
   API_KEY = 'AIzaSyAPODoh7pbgRTLTAWlaQkFBbqbTadJsz1U'
 
-  performSearch = (str) => {
-    if (str.length) {
-      fetch(`${this.API_URL}${str.replace(' ', '+')}&maxResults=40&key=${this.API_KEY}`)
+  state = {
+    text: ''
+  }
+
+  performSearch = () => {
+    if (this.state.text.length) {
+      fetch(`${this.API_URL}${this.state.text.replace(' ', '+')}&maxResults=40&key=${this.API_KEY}`)
         .then(res => res.json())
-        .then(res => this.props.saveResults(res.items))
+        .then(res => console.log(res) || this.props.saveResults(res.items))
     } else {
       this.props.saveResults([])
     }
   }
 
   debounce = (callback, str) => {
+    this.setState({text: str})
     if (this.timeout) clearTimeout(this.timeout)
-    this.timeout = setTimeout(() => callback(str), 300)
+    this.timeout = setTimeout(callback, 300)
   }
 
   render() {
@@ -33,7 +38,10 @@ class SearchBar extends Component {
       <div className="App_header">
         <div className='App_header_MenuContainer'><MenuContainer /></div>
         <input
-          onKeyUp={(e) => this.debounce(this.performSearch, e.target.value)}
+          value={this.state.text}
+          onChange={(e) => this.debounce(this.performSearch, e.target.value)}
+          onFocus={() => history.location.pathname !== '/searchbarres' && history.push('/searchbarres')}
+          onBlur={() => !this.state.text.length && history.goBack()}
           type='text'
           className='App_header_SearchBar'
           placeholder='Search your next lecture!' />
