@@ -3,10 +3,10 @@ import { Router, Route } from 'react-router-dom';
 import history from './history';
 import './App.sass';
 
-import MenuContainer from './components/MenuContainer'
 import ScannerDashboard from './components/ScannerDashboard';
 import Result from './components/Result';
 import Home from './components/Home';
+import SearchBar from './components/SearchBar';
 
 
 class App extends Component {
@@ -19,11 +19,7 @@ class App extends Component {
     return (
       <Router history={history}>
         <div>
-          <div className="App_header">
-            <div className='App_header_MenuContainer'><MenuContainer /></div>
-            <input type="text" className='App_header_SearchBar' placeholder='Search your next lecture!' />
-          </div>
-
+          <SearchBar />
           <div>
             <Route exact path='/' component={Home}/>
             <Route path='/scannerdashboard' component={ScannerDashboard}/>

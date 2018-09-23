@@ -1,18 +1,27 @@
 import { combineReducers } from 'redux';
-import { ON_DETECTED } from './actionTypes'
+import { ON_DETECTED, ON_SEARCH } from './actionTypes'
 
 const defaultState = {
-  results: []
+  results: {},
+  list: []
 };
 
 const onDetectedReducer = (state = defaultState, action) => {
-  console.log('redux state', state)
-  console.log('redux action', action)
   switch(action.type) {
     case ON_DETECTED:
       return {
         ...state,
         results: action.result
+      }
+    case ON_SEARCH:
+      console.log('prevState:', state)
+      console.log('newState:', {
+        ...state,
+        list: action.list
+      })
+      return {
+        ...state,
+        list: action.list
       }
     default:
       return state;

@@ -1,6 +1,11 @@
-import { ON_DETECTED } from './actionTypes'
+import { ON_DETECTED, ON_SEARCH } from './actionTypes'
 
 export const onDetectedReducer = (result) => ({
   type: ON_DETECTED,
-  result: result
+  result
 });
+
+export const onSearch = (list) => ({
+  type: ON_SEARCH,
+  list
+})
