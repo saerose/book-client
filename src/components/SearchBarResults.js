@@ -23,7 +23,7 @@ class SearchBarResult extends Component {
     if (result.length) {
       console.log('Result working')
       return (
-        <div>
+        <div className='SearchBarResult'>
           {this.renderResults(result)}
         </div>
 
