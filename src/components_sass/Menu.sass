@@ -3,7 +3,7 @@
 #flyoutMenu
   width: 30vw
   height: 100vh
-  background-color: $secondary
+  background-color: $plight
   position: fixed
   top: 0
   left: 0
@@ -22,10 +22,6 @@
   +flex()
   height: 8vh
   text-decoration: none
-  color: $secondary
-
-// #flyoutMenu a:hover
-//   background-color: white
 
 .flyoutMenu_MenuProfileWrapper
   +flex($direction: column, $justify: center)
@@ -34,9 +30,9 @@
   list-style-type: none
   margin-top: 135%
 
-.flyoutMenu_li
-  background-color: $secondary
-  border-bottom: 2px solid #33354C
+// .flyoutMenu_li
+//   // background-color: $slight
+//   border-bottom: 1px solid #33354C
 
 .flyoutMenu_li:hover
   background-color: white
@@ -44,9 +40,12 @@
 .flyoutMenu_li_name
   +flex($direction: row, $justify: flex-start, $align: center)
   margin: 10px auto 10px 0px
-  color: $stext
+  color: $ptext
+  font-size: 1em
+  font-weight: 300
+
 
 .flyoutMenu_li_img
   padding: 5px
-  margin: 10px auto 10px auto
-  width: 30%
+  margin: 0px 10px
+  width: 25%
