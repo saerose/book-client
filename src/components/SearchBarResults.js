@@ -32,8 +32,9 @@ class SearchBarResult extends Component {
       console.log('Null');
       return (
         <div className='Result_null'>
+          <div className='Result_null_title'>Oops!</div>
           <img className='Result_null_img' alt='Tombstone' src={tombstone} />
-          <div className='Result_null_text'>There is no result.</div>
+          <div className='Result_null_text'>Sorry, there is no result.</div>
         </div>
       );
     }
