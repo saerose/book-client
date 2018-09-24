@@ -15,9 +15,9 @@ class Home extends Component {
     fetch('http://localhost:3001/login/google', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type' : 'application/json'
       },
-      body: JSON.stringify(profileObj)
+      body: JSON.stringify({profileObj})
     })
       .then(res => res.json())
       .then(res => {
@@ -48,12 +48,12 @@ class Home extends Component {
     } else {
       return (
         <div className='Home_wrapper'>
-        <div className='Home_wrapper_title'>Welcome!</div>
-        <div className='Home_wrapper_text'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate.
-        </div>
-        <img className='Home_wrapper_img' alt='OpenBook' src={openBook} />
+          <div className='Home_wrapper_title'>Welcome!</div>
+          <div className='Home_wrapper_text'>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate.
+          </div>
+          <img className='Home_wrapper_img' alt='OpenBook' src={openBook} />
         </div>
       )
     }
@@ -69,29 +69,3 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 export default connect (mapStateToProps, mapDispatchToProps)(Home);
-
-/*
-return (
-      <div className='Home_wrapper'>
-        <div className='Home_wrapper_title'>Ello Bello</div>
-        <div className='Home_wrapper_text'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?
-          </div>
-        <img className='Home_wrapper_img' alt='OpenBook' src={openBook} />
-        {
-          !this.props.user.id && (
-          <div>
-          <div>This is the sign up title</div>
-            <GoogleLogin
-              clientId={process.env.GOOGLE_API_KEY}
-              buttonText="Login"
-              onSuccess={this.loginGoogle}
-              onFailure={console.error}
-            />
-          </div>
-          )
-        }
-
-      </div>
-    )
-*/
