@@ -15,31 +15,47 @@
   font-size: 1em
 
 .Result_topinfo_outerdiv
-  background-color: yellow
-  height: 24vh
-
-.Result_img_outerdiv
-  +flex()
+  background-color: $darkgrey
 
 .Result_img
-  +flex($direction: column, $justify: space-around)
   width: 40%
   height: 40%
-  padding: 10px;
+  padding: 20px
+  display: block
+  margin-left: auto
+  margin-right: auto
+  width: 50%
+
+.addToLibraryButton
+  padding-left: 20px
+  padding-right: 20px
+  margin-top: -40px
+
+button
+  background-color: $secondary
+  border: none
+  padding: 20px
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  font-size: 16px
+  margin: 4px 2px
+  border-radius: 50%
 
 .Result_topinfo_wrapper
-  +flex($direction: column)
-  color: #997A77
-  padding: 10px
-  background-color: pink
+  color: $ptext
+  padding-left: 20px
+  padding-right: 20px
+  margin: 10px
 
 .Result_topinfo_wrapper_title
   font-size: 2em
-  margin-top: -6px
+  line-height: 1
   font-weight: 700
 
 .Result_topinfo_wrapper_subtitle
   font-size: 1.6em
+  line-height: 1
 
 .Result_topinfo_wrapper_categories
   font-weight: 300
@@ -47,20 +63,23 @@
 .Result_topinfo_wrapper_authors
   font-style: italic
   font-size: .9em
-  margin-top: -6px
 
 .Result_topinfo_wrapper_rating
   margin-top: 10px
 
 .Result_bottominfo_outerdiv
-  padding-top: 45px
+  background-color: $slight
+  padding-left: 20px
+  padding-right: 20px
+  margin: 20px
+
 
 .Result_bottominfo_sinopsis
-  padding-left: 20px
+  padding: 10px 20px
   font-size: 2em
 
 .Result_TextSnippet
-  padding: 20px
+  padding: 10px 20px
   color: #997A77
   font-size:: 1.2em
   font-weight: 300
