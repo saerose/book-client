@@ -5,6 +5,8 @@ import '../components_sass/Result.sass';
 import { connect } from 'react-redux';
 
 import tombstone from '../assets/tombstone.svg';
+import plus from '../assets/add-icon.svg';
+
 
 class Result extends Component {
   changeRating( newRating, name ) {
@@ -28,7 +30,8 @@ class Result extends Component {
           </div>
 
           <div className='addToLibraryButton'>
-            <button><span>🐙</span></button>
+            <img className='button_img' alt='Plus' src={plus} />
+            {/* <div className='addToLibraryButton_plus'>+</div> */}
           </div>
 
           <div className='Result_topinfo_wrapper'>
@@ -65,6 +68,7 @@ class Result extends Component {
       return (
         <div className='Result_null'>
           <img className='Result_null_img' alt='Tombstone' src={tombstone} />
+          <div className='Result_null_title'>Oops!</div>
           <div className='Result_null_text'>There is no result.</div>
         </div>
       );
