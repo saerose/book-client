@@ -1,19 +1,37 @@
 import React, { Component } from "react";
-// import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { logIn } from '../redux/actions';
 
 import profileBase from '../assets/man.svg';
 
 
 class MenuProfile extends Component {
   render() {
-
-    return(
+    console.log(this.props.user)
+    if (!this.props.user.id) {
+      return (
         <div className='flyoutMenu_profile'>
           <img className='flyoutMenu_profile_img' alt='Profile' src={profileBase} />
           <div className='flyoutMenu_profile_name'>Your Name</div>
         </div>
-    )
+      )
+    } else {
+      return(
+          <div className='flyoutMenu_profile'>
+            <img className='flyoutMenu_profile_img' alt='Profile' src={this.props.user.photo} />
+            <div className='flyoutMenu_profile_name'>{this.props.user.userName}</div>
+          </div>
+      )
+    }
   }
 }
 
-export default MenuProfile;
+const mapStateToProps = (state) => ({
+  user: state.userReducer.user
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  logIn: (user) => dispatch(logIn(user))
+})
+
+export default connect (mapStateToProps, mapDispatchToProps)(MenuProfile);
