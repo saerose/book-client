@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
 import '../components_sass/MenuProfile.sass';
-import home from '../assets/house.svg';
-import camera from '../assets/camera.svg';
-import books from '../assets/book.svg';
+import home from '../assets/paper-plane.svg';
+import camera from '../assets/aperture.svg';
+import books from '../assets/books.svg';
 
 import MenuProfile from "./MenuProfile";
 
@@ -44,12 +44,6 @@ class Menu extends Component {
             <Link to='/scannerdashboard'>
             <img className='flyoutMenu_li_img' alt='Books' src={books} />
             <div className='flyoutMenu_li_name'>Library</div>
-            </Link>
-          </li>
-          <li className='flyoutMenu_li'>
-            <Link to='/scannerdashboard'>
-            <img className='flyoutMenu_li_img' alt='Scan' src={camera} />
-            <div className='flyoutMenu_li_name'>Stuff</div>
             </Link>
           </li>
         </div>
