@@ -1,1 +1,20 @@
 @import '../index'
+
+.SearchResult_wrapper
+  +flex()
+  background-color: $secondary
+  border-bottom: 1px solid red
+
+.SearchResult_img_wrapper
+  +flex($direction: column, $justify: flex-start)
+  background-color: lavender
+
+.SearchResult_info_wrapper
+  +flex($direction: column, $justify: flex-start)
+  background-color: dodgerblue
+
+.SearchResult_img
+  padding: 10px
+
+.SearchResult_info_wrapper
+  padding: 10px
