@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 
 import '../components_sass/MenuProfile.sass';
 import home from '../assets/startup.svg';
-import camera from '../assets/shutter.svg';
+import scan from '../assets/qr-code.svg';
 import books from '../assets/menu-book.svg';
 
 import MenuProfile from "./MenuProfile";
-
-
 
 class Menu extends Component {
   render() {
@@ -37,7 +35,7 @@ class Menu extends Component {
           </li>
           <li className='flyoutMenu_li'>
             <Link to='/scannerdashboard'>
-            <img className='flyoutMenu_li_img' alt='Scan' src={camera} />
+            <img className='flyoutMenu_li_img' alt='Scan' src={scan} />
             <div className='flyoutMenu_li_name'>Scan</div>
             </Link>
           </li>
