@@ -12,8 +12,6 @@ class Scanner extends Component {
 
   onDetectedTest = (result) => {
     this.props.detectedCallback(result.codeResult.code)
-    console.log('result', result);
-    console.log('result 2.0', result.codeResult.code);
   }
 
   componentDidMount() {
@@ -63,11 +61,9 @@ class Scanner extends Component {
   }
 
   componentWillUnmount() {
-    Quagga.offDetected(this.onDetected); //_onDetected
+    Quagga.offDetected(this.onDetected);
     Quagga.stop();
 }
-
-// if scanner onDetected (detects stuff) = Link To result
 
   render() {
     console.log('scanner render');
