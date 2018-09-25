@@ -10,6 +10,7 @@ import Result from './components/Result';
 import Home from './components/Home';
 import SearchBar from './components/SearchBar';
 import SearchBarResults from './components/SearchBarResults';
+import LibraryDashboard from './components/LibraryDashboard';
 
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
             <Route path='/scannerdashboard' component={ScannerDashboard}/>
             <Route path='/result' component={Result}/>
             <Route path='/searchbarres' component={SearchBarResults} />
+            <Route path='/library' component={LibraryDashboard} />
           </div>
         </div>
       </Router>
@@ -43,9 +45,4 @@ const mapStateToProps = (state) => ({
   user: state.userReducer.user
 })
 
-// const mapDispatchToProps = (dispatch) => ({
-//   logIn: (user) => dispatch(logIn(user))
-// })
-
 export default connect (mapStateToProps, null)(App);
-// export default App;
