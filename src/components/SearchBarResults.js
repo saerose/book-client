@@ -4,7 +4,8 @@ import '../components_sass/Result.sass';
 import SearchResultItem from './SearchResultItem';
 import { connect } from 'react-redux';
 
-import tombstone from '../assets/tombstone.svg';
+import web from '../assets/spider-web.svg';
+
 
 class SearchBarResult extends Component {
 
@@ -28,7 +29,7 @@ class SearchBarResult extends Component {
       return (
         <div className='Result_null'>
           <div className='Result_null_title'>Oops!</div>
-          <img className='Result_null_img' alt='Tombstone' src={tombstone} />
+          <img className='Result_null_img' alt='Tombstone' src={web} />
           <div className='Result_null_text'>Sorry, there is no result.</div>
         </div>
       );
