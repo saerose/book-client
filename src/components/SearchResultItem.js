@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import StarRatings from 'react-star-ratings';
 import '../components_sass/SearchBarResultItem.sass';
 
+import defaultBook from '../assets/default-book.png'
+
 
 class SearchResultItem extends Component {
 
@@ -10,7 +12,8 @@ class SearchResultItem extends Component {
     return (
       <div className='SearchResult_wrapper'>
         <div className='SearchResult_img_wrapper'>
-          <img className='SearchResult_img' alt='Book cover' src={this.props.imageLinks.thumbnail} />
+          <img className='SearchResult_img' alt='Book cover'
+              src={this.props.imageLinks ? this.props.imageLinks.thumbnail : defaultBook} />
         </div>
 
         <div className='SearchResult_info_wrapper'>
@@ -18,15 +21,17 @@ class SearchResultItem extends Component {
           <div className='SearchResult_subtitle'>{this.props.subtitle}</div>
           <div className='SearchResult_author'> by {this.props.authors}</div>
 
-          <StarRatings
-            rating={this.props.averageRating}
-            starRatedColor="#F8E473"
-            changeRating={this.changeRating}
-            numberOfStars={5}
-            starDimension={20}
-            starSpacing={2}
-            name='rating'
-          />
+          <div className='SearchResult_rating'>
+            <StarRatings
+              rating={this.props.averageRating}
+              starRatedColor="#F8E473"
+              changeRating={this.changeRating}
+              numberOfStars={5}
+              starDimension={20}
+              starSpacing={2}
+              name='rating'
+            />
+          </div>
         </div>
       </div>
     )
