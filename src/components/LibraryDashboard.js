@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../components_sass/LibraryDashboard.sass'
+import LibraryDashboardItem from './LibraryDashboardItem';
 
 class LibraryDashboard extends Component {
 
@@ -13,7 +14,7 @@ class LibraryDashboard extends Component {
         </div>
 
         <div className='LibraryDashboard_info'>
-        Sorry, this component is still under construction.
+          <LibraryDashboardItem />
         </div>
       </div>
     );
