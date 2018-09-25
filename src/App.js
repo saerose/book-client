@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Router, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import history from './history';
 import './App.sass';
 
@@ -19,8 +21,12 @@ class App extends Component {
   render() {
     return (
       <Router history={history}>
-        <div>
-          <SearchBar />
+        <div className='App_loginUser'>
+          {
+            this.props.user.id
+            ? <SearchBar />
+            : ''
+          }
           <div>
             <Route exact path='/' component={Home}/>
             <Route path='/scannerdashboard' component={ScannerDashboard}/>
@@ -33,4 +39,13 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  user: state.userReducer.user
+})
+
+// const mapDispatchToProps = (dispatch) => ({
+//   logIn: (user) => dispatch(logIn(user))
+// })
+
+export default connect (mapStateToProps, null)(App);
+// export default App;
