@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
 import '../components_sass/MenuProfile.sass';
-import home from '../assets/paper-plane.svg';
-import camera from '../assets/aperture.svg';
-import books from '../assets/books.svg';
+import home from '../assets/startup.svg';
+import camera from '../assets/shutter.svg';
+import books from '../assets/menu-book.svg';
 
 import MenuProfile from "./MenuProfile";
 
@@ -13,7 +13,6 @@ import MenuProfile from "./MenuProfile";
 class Menu extends Component {
   render() {
     let visibility = 'hide';
-
     if(this.props.menuVisibility) {
       visibility = 'show';
     }
