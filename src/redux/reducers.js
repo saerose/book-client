@@ -18,11 +18,6 @@ const onDetectedReducer = (state = defaultState, action) => {
         results: action.result
       }
     case ON_SEARCH:
-      console.log('prevState:', state)
-      console.log('newState:', {
-        ...state,
-        list: action.list
-      })
       return {
         ...state,
         list: action.list
