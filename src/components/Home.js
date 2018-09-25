@@ -36,6 +36,13 @@ class Home extends Component {
           </div>
           <img className='Home_wrapper_signup_img' alt='Pile of books' src={pileBooks} />
 
+            {/* <div className='Home_signup_minervadb'>
+              <input className='Home_signup_username' type="text" />
+              <input className='Home_signup_password' type="text" />
+              <button>Login</button>
+            </div> */}
+
+            <div className='Home_signup_wrapper_googlebutton'>
             <GoogleLogin
               className ='Home_signup_googlebutton'
               clientId='673352715028-kbn3igi1c3sg2apmbf1vos7stdv8n406.apps.googleusercontent.com'
@@ -43,6 +50,7 @@ class Home extends Component {
               onSuccess={this.loginGoogle}
               onFailure={console.error}
             />
+            </div>
         </div>
       )
     } else {
