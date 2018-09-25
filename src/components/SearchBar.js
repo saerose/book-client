@@ -21,7 +21,7 @@ class SearchBar extends Component {
     if (this.state.text.length) {
       fetch(`${this.API_URL}${this.state.text.replace(' ', '+')}&maxResults=40&key=${this.API_KEY}`)
         .then(res => res.json())
-        .then(res => console.log(res) || this.props.saveResults(res.items))
+        .then(res => this.props.saveResults(res.items))
     } else {
       this.props.saveResults([])
     }
