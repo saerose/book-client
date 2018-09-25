@@ -7,7 +7,6 @@ import profileBase from '../assets/man.svg';
 
 class MenuProfile extends Component {
   render() {
-    console.log(this.props.user)
     if (!this.props.user.id) {
       return (
         <div className='flyoutMenu_profile'>
