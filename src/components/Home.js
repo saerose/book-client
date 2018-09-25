@@ -43,13 +43,13 @@ class Home extends Component {
             </div> */}
 
             <div className='Home_signup_wrapper_googlebutton'>
-            <GoogleLogin
-              className ='Home_signup_googlebutton'
-              clientId='673352715028-kbn3igi1c3sg2apmbf1vos7stdv8n406.apps.googleusercontent.com'
-              buttonText="Login with Google"
-              onSuccess={this.loginGoogle}
-              onFailure={console.error}
-            />
+              <GoogleLogin
+                className ='Home_signup_googlebutton'
+                clientId='673352715028-kbn3igi1c3sg2apmbf1vos7stdv8n406.apps.googleusercontent.com'
+                buttonText="Login with Google"
+                onSuccess={this.loginGoogle}
+                onFailure={console.error}
+              />
             </div>
         </div>
       )
