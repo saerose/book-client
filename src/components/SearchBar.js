@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import '../components_sass/Menu.sass';
 import '../components_sass/Home.sass';
+import '../components_sass/SearchBar.sass';
 
 import MenuContainer from './MenuContainer';
 import { onSearch } from '../redux/actions';
@@ -35,7 +36,7 @@ class SearchBar extends Component {
   render() {
 
     return(
-      <div className="App_header">
+      <div className="App_header_searchbar">
         <div className='App_header_MenuContainer'><MenuContainer /></div>
         <input
           value={this.state.text}
