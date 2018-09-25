@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import StarRatings from 'react-star-ratings';
 import '../components_sass/Result.sass';
 
 import SearchResultItem from './SearchResultItem';
@@ -19,17 +18,13 @@ class SearchBarResult extends Component {
 
   render() {
     const result = this.props.list;
-    console.log('within result.js', JSON.stringify(this.props.results))
     if (result.length) {
-      console.log('Result working')
       return (
         <div className='SearchBarResult'>
           {this.renderResults(result)}
         </div>
-
       );
     } else {
-      console.log('Null');
       return (
         <div className='Result_null'>
           <div className='Result_null_title'>Oops!</div>
@@ -39,7 +34,6 @@ class SearchBarResult extends Component {
       );
     }
   }
-
 }
 
 const mapStateToProps = (state) => ({
