@@ -11,6 +11,11 @@
   overflow: scroll
   z-index: 1000
 
+  li
+    &:hover
+      background-color: rgba(0,0,0,.2)
+
+// SLIDE
 #flyoutMenu.hide
   transform: translate3d(-100vw, 0, 0)
 
@@ -29,14 +34,15 @@
 
 .flyoutMenu_divWrapper
   list-style-type: none
-  margin-top: 36%
+  margin-top: 33%
 
 // .flyoutMenu_li
-//   // background-color: $slight
+//   background-color: $slight
 //   border-bottom: 1px solid #33354C
 
-.flyoutMenu_li:hover
-  background-color: white
+// .flyoutMenu_li
+//   &:hover
+//   background-color: red
 
 .flyoutMenu_li_name
   +flex($direction: row, $justify: flex-start, $align: center)
@@ -46,3 +52,4 @@
 
 .flyoutMenu_li_img
   width: 20%
+  padding-top: 5px

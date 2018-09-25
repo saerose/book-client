@@ -1,24 +1,27 @@
 @import '../index'
 
-.Home_wrapper, .Home_signup_wrapper
+// SIGN UP
+.Home_signup_wrapper
   text-align: center
+  background-color: $primary
 
-.Home_wrapper_title, .Home_signup_title
-  padding-top: 20px
-  color: $stext
-  font-size: 3em
+.Home_signup_title
+  padding: 20px
+  color: $ptext
+  font-size: 5em
   font-weight: 700
 
-.Home_wrapper_img, .Home_wrapper_signup_img
-  width: 70vw
-  padding: 40px 30px 30px 30px
-
-.Home_wrapper_text, .Home_signup_text
-  margin: 20px
-  color: $stext
+.Home_signup_text
+  color: $ptext
+  padding-left: 20px
+  padding-right: 20px
+  margin: 10px
   text-align: justify
   hyphens: auto
-  font-size: 1.2em
+  font-size: 1.6em
+
+.Home_signup_wrapper_googlebutton
+  padding: 39px
 
 .Home_signup_googlebutton
   border-radius: 10px
@@ -26,6 +29,30 @@
   height: 6vh
   font-size: 1.1em
   font-family: 'Nunito', sans-serif
-  background-color: $primary
-  color: $ptext
+  background-color: $secondary
+  color: $stext
   text-decoration: none
+
+// HOME WITH USER
+.Home_wrapper
+  text-align: center
+
+.Home_wrapper_title
+  padding-top: 20px
+  color: $stext
+  font-size: 3em
+  font-weight: 700
+
+.Home_wrapper_text
+  padding-left: 20px
+  padding-right: 20px
+  margin: 10px
+  color: $stext
+  text-align: justify
+  hyphens: auto
+  font-size: 1.2em
+
+// SHARED
+.Home_wrapper_img, .Home_wrapper_signup_img
+  width: 70vw
+  padding: 22px
