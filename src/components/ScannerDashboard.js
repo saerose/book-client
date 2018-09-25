@@ -15,19 +15,15 @@ class ScannerDashboard extends Component {
   }
 
   // Receives isbn and sends to API.
-  //Scanner — we are sending it in the props.
+  // Scanner — we are sending it in the props.
   executeFetch = (isbn) => {
-    // console.log('this is the fetch', isbn)
     const BASE_URL = 'https://www.googleapis.com/books/v1/volumes?q=isbn:'
     const apiKey = 'AIzaSyAPODoh7pbgRTLTAWlaQkFBbqbTadJsz1U'
     fetch(BASE_URL + isbn + '&key=' + apiKey)
       .then(results => results.json())
-      // .then(console.log)
       .then(results => {
         if (results.totalItems) {
-          console.log('fetch', results)
           this.props.onDetectedReducer(results.items[0])
-          // window.location.href = '/result'
           history.push('/result')
         }
       })
