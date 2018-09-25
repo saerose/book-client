@@ -2,15 +2,36 @@ import React, { Component } from 'react';
 import StarRatings from 'react-star-ratings';
 import '../components_sass/SearchBarResultItem.sass';
 
+import { connect } from 'react-redux';
+import { onDetectedReducer } from '../redux/actions';
+import history from '../history';
+
 import defaultBook from '../assets/default-book.png'
 
 
 class SearchResultItem extends Component {
 
+
+  // Fetching single book from Search Bar
+  itemFetch = (isbn) => {
+    const BASE_URL= 'https://www.googleapis.com/books/v1/volumes?q=isbn:'
+    const apiKey = 'AIzaSyAPODoh7pbgRTLTAWlaQkFBbqbTadJsz1U'
+    const isbnNum = this.props.industryIdentifiers[1].identifier
+    console.log('identifiers', this.props.industryIdentifiers[1].identifier)
+    fetch(BASE_URL + isbnNum + '&key=' + apiKey)
+      .then(results => results.json())
+      .then(results => {
+        if(results.totalItems) {
+          this.props.onDetectedReducer(results.items[0])
+          history.push('/result')
+        }
+      })
+  }
+
   render() {
-    console.log(this.props)
+    // console.log(this.props)
     return (
-      <div className='SearchResult_wrapper'>
+      <div className='SearchResult_wrapper' onClick={this.itemFetch}>
         <div className='SearchResult_img_wrapper'>
           <img className='SearchResult_img' alt='Book cover'
               src={this.props.imageLinks ? this.props.imageLinks.thumbnail : defaultBook} />
@@ -39,4 +60,15 @@ class SearchResultItem extends Component {
 
 }
 
-export default SearchResultItem;
+
+const mapStateToProps = (state) => ({
+  results: state.results
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  onDetectedReducer: (results) => dispatch(onDetectedReducer(results))
+})
+
+export default connect (mapStateToProps, mapDispatchToProps)(SearchResultItem);
+
+// export default SearchResultItem;
