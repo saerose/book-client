@@ -1,4 +1,9 @@
-import { ON_DETECTED, ON_SEARCH, LOG_IN } from './actionTypes'
+import {
+  ON_DETECTED,
+  ON_SEARCH,
+  LOG_IN,
+  ADD_BOOK
+} from './actionTypes'
 
 export const onDetectedReducer = (result) => ({
   type: ON_DETECTED,
@@ -13,4 +18,9 @@ export const onSearch = (list) => ({
 export const logIn = (user) => ({
   type: LOG_IN,
   user
+})
+
+export const addLibrary = (book) => ({
+  type: ADD_BOOK,
+  book
 })
