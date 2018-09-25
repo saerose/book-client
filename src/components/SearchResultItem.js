@@ -8,16 +8,13 @@ import history from '../history';
 
 import defaultBook from '../assets/default-book.png'
 
-
 class SearchResultItem extends Component {
-
 
   // Fetching single book from Search Bar
   itemFetch = (isbn) => {
     const BASE_URL= 'https://www.googleapis.com/books/v1/volumes?q=isbn:'
     const apiKey = 'AIzaSyAPODoh7pbgRTLTAWlaQkFBbqbTadJsz1U'
     const isbnNum = this.props.industryIdentifiers[1].identifier
-    console.log('identifiers', this.props.industryIdentifiers[1].identifier)
     fetch(BASE_URL + isbnNum + '&key=' + apiKey)
       .then(results => results.json())
       .then(results => {
@@ -48,8 +45,8 @@ class SearchResultItem extends Component {
               starRatedColor="#F8E473"
               changeRating={this.changeRating}
               numberOfStars={5}
-              starDimension={20}
-              starSpacing={2}
+              starDimension={'20'}
+              starSpacing={'2'}
               name='rating'
             />
           </div>
