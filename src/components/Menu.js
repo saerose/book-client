@@ -13,6 +13,7 @@ import MenuProfile from "./MenuProfile";
 class Menu extends Component {
   render() {
     let visibility = 'hide';
+
     if(this.props.menuVisibility) {
       visibility = 'show';
     }
