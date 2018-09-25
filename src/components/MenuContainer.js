@@ -6,7 +6,6 @@ import '../components_sass/MenuContainer.sass'
 class MenuContainer extends Component {
   constructor(props, context) {
     super(props, context);
-
     this.state = {
       visible: false
     };
@@ -17,8 +16,6 @@ class MenuContainer extends Component {
 
   handleMouseDown(e) {
     this.toggleMenu();
-
-    console.log('clicked');
     e.stopPropagation();
   }
 
