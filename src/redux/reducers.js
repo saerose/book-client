@@ -15,9 +15,9 @@ const defaultUserState = {
   user: {}
 }
 
-const defaultBookState = {
-  book: []
-}
+// const defaultBookState = {
+//   book: []
+// }
 
 const onDetectedReducer = (state = defaultState, action) => {
   switch(action.type) {
@@ -43,17 +43,16 @@ const userReducer = (state = defaultUserState, action) => {
         ...state,
         user: action.user
       }
-    default:
-      return state;
-  }
-}
-
-const addBookReducer = (state = defaultBookState, action) => {
-  switch(action.type) {
     case ADD_BOOK:
       return {
         ...state,
-        book: action.book
+        user: {
+          ...state.user,
+          books: [
+            ...state.user.books,
+            action.book
+          ]
+        }
       }
     default:
       return state;
@@ -63,8 +62,7 @@ const addBookReducer = (state = defaultBookState, action) => {
 // Combining all reducers.
 const reducers = combineReducers({
   onDetectedReducer,
-  userReducer,
-  addBookReducer
+  userReducer
 });
 
 export default reducers;

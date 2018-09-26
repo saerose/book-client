@@ -3,6 +3,8 @@ import StarRatings from 'react-star-ratings';
 import '../components_sass/Result.sass';
 
 import { connect } from 'react-redux';
+import { addLibrary } from '../redux/actions';
+
 
 import web from '../assets/spider-web.svg';
 import plus from '../assets/add-icon.svg';
@@ -13,6 +15,21 @@ class Result extends Component {
     this.setState({
       rating: newRating
     });
+  }
+
+  addBookToLibrary = () => {
+    console.log(this.props.id)
+    fetch(`http://localhost:3001/library/${this.props.id}`, {
+      method: 'POST',
+      body: JSON.stringify({
+        book: this.props.results
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then(result => result.json())
+    .then(this.addBook)
   }
 
   render() {
@@ -27,7 +44,7 @@ class Result extends Component {
             <img className='Result_img' alt= 'Book cover'src={result.volumeInfo.imageLinks.thumbnail} />
           </div>
 
-          <div className='addToLibraryButton'>
+          <div className='addToLibraryButton' onClick={this.addBookToLibrary}>
             <img className='button_img' alt='Plus' src={plus} />
             {/* <div className='addToLibraryButton_plus'>+</div> */}
           </div>
@@ -75,7 +92,12 @@ class Result extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  results: state.onDetectedReducer.results
+  results: state.onDetectedReducer.results,
+  id: state.userReducer.user.id
 })
 
-export default connect (mapStateToProps)(Result);
+const mapDispatchToProps = (dispatch) => ({
+  addBook: (results) => dispatch(addLibrary(results))
+})
+
+export default connect (mapStateToProps, mapDispatchToProps)(Result);
