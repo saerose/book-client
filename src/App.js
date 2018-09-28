@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import history from './history';
 import './App.sass';
 
+import Login from './components/auth/Login';
+import Signup from './components/auth/Signup';
 import ScannerDashboard from './components/ScannerDashboard';
 import Result from './components/Result';
 import Home from './components/Home';
@@ -30,6 +32,8 @@ class App extends Component {
           }
           <div>
             <Route exact path='/' component={Home}/>
+            <Route path='/login' component={Login}/>
+            <Route path='/signup' component={Signup}/>
             <Route path='/scannerdashboard' component={ScannerDashboard}/>
             <Route path='/result' component={Result}/>
             <Route path='/searchbarres' component={SearchBarResults} />
