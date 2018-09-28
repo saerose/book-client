@@ -25,11 +25,6 @@ class App extends Component {
     return (
       <Router history={history}>
         <div className='App_loginUser'>
-          {
-            this.props.user.id
-            ? <SearchBar />
-            : ''
-          }
           <div>
             <Route exact path='/' component={Login}/>
             <Route path='/login' component={Login}/>

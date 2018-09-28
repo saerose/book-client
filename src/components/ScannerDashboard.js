@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../components_sass/ScannerDashboard.sass';
 import { connect } from 'react-redux';
+import SearchBar from './SearchBar';
 import Scanner from './Scanner';
 import history from '../history';
 import { onDetectedReducer } from '../redux/actions';
@@ -32,6 +33,7 @@ class ScannerDashboard extends Component {
   render() {
     return (
       <div className="ScannerDashboard">
+        <SearchBar />
         <div className="ScannerDashboard_content">
           <Scanner detectedCallback={this.executeFetch} />
         </div>
