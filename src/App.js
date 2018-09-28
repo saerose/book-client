@@ -25,15 +25,11 @@ class App extends Component {
     return (
       <Router history={history}>
         <div className='App_loginUser'>
-          {
-            this.props.user.id
-            ? <SearchBar />
-            : ''
-          }
           <div>
-            <Route exact path='/' component={Home}/>
+            <Route exact path='/' component={Login}/>
             <Route path='/login' component={Login}/>
             <Route path='/signup' component={Signup}/>
+            <Route path='/home' component={Home}/>
             <Route path='/scannerdashboard' component={ScannerDashboard}/>
             <Route path='/result' component={Result}/>
             <Route path='/searchbarres' component={SearchBarResults} />

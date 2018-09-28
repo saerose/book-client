@@ -3,12 +3,8 @@ import { connect } from 'react-redux';
 import { logIn } from '../../redux/actions';
 import GoogleLogin from 'react-google-login';
 import { Link } from 'react-router-dom';
-
-
 import '../../components_sass/Menu.sass';
 import '../../components_sass/Signup.sass';
-
-import openBook from '../../assets/open-book.svg';
 import pileBooks from '../../assets/pile-books.svg';
 
 
@@ -32,14 +28,8 @@ class Signup extends Component {
   render() {
       return (
         <div className='Signup_signup_wrapper'>
-
-
           <div className='Signup_signup_title'>minerva</div>
-
-
           <img className='Signup_wrapper_signup_img' alt='Pile of books' src={pileBooks} />
-
-
           <div className='Signup_socialmedia_signup_buttons'>
             <div className='Signup_signup_wrapper_googlebutton'>
               <GoogleLogin
@@ -60,13 +50,9 @@ class Signup extends Component {
               />
             </div>
           </div>
-
-
           <div className='Signup_signup_text'>
             or
           </div>
-
-
           <div className='Signup_signup_form'>
             <div className='Signup_signup_inputs'>
               <div>
@@ -76,11 +62,9 @@ class Signup extends Component {
               </div>
             </div>
             <button className='Signup_signup_button'>
-              <strong>Sign Up!</strong>
+              <strong>Sign Up</strong>
             </button>
           </div>
-
-
           <div className='Signup_to_login'>
             <div>
               <div className='Signup_signup_text'>
@@ -95,8 +79,6 @@ class Signup extends Component {
               </Link>
             </div>
           </div>
-
-
         </div>
       )
   }

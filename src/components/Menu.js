@@ -28,7 +28,7 @@ class Menu extends Component {
 
         <div className='flyoutMenu_divWrapper'>
           <li className='flyoutMenu_li'>
-            <Link to='/'>
+            <Link to='/home'>
               <img className='flyoutMenu_li_img' alt='Home' src={home} />
               <div className='flyoutMenu_li_name'>Home</div>
             </Link>

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import '../components_sass/Result.sass';
-
 import SearchResultItem from './SearchResultItem';
 import { connect } from 'react-redux';
-
+import SearchBar from './SearchBar';
 import web from '../assets/spider-web.svg';
 
 
@@ -28,6 +27,7 @@ class SearchBarResult extends Component {
     } else {
       return (
         <div className='Result_null'>
+          <SearchBar />
           <div className='Result_null_title'>Oops!</div>
           <img className='Result_null_img' alt='Tombstone' src={web} />
           <div className='Result_null_text'>Sorry, there is no result.</div>
