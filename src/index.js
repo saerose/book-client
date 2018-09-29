@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.sass';
-import App from './App';
+import Root from './Root';
 import registerServiceWorker from './registerServiceWorker';
 
 
@@ -15,7 +15,7 @@ let store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ &&
 
   ReactDOM.render(
     <Provider store={store}>
-        <App/>
+        <Root/>
     </Provider>,
     document.getElementById('root')
   );
