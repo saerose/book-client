@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import * as fromAuth from './authReducer';
 import {
   ON_DETECTED,
   ON_SEARCH,
@@ -56,9 +57,9 @@ const userReducer = (state = defaultUserState, action) => {
 }
 
 // Combining all reducers.
-const reducers = combineReducers({
+export default combineReducers({
   onDetectedReducer,
   userReducer
 });
 
-export default reducers;
+export const isAuthenticated = state => fromAuth.isAuthenticated(state.auth);
