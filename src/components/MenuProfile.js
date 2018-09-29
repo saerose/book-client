@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { logIn } from '../redux/actions';
+import { logIn } from '../actions/actions';
 
 import profileBase from '../assets/man.svg';
 

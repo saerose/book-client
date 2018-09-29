@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { logIn } from '../../redux/actions';
+import { logIn } from '../../actions/actions';
 import GoogleLogin from 'react-google-login';
 import { Link } from 'react-router-dom';
 import '../../components_sass/Menu.sass';

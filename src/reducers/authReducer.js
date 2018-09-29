@@ -8,7 +8,20 @@
 //     return true;
 // }
 
+const initialState = {
+    access: undefined,
+    refresh: undefined,
+    errors: {},
+};
+
+export default (state=initialState,action) => {
+  switch(action.type) {
+    default:
+      return state;
+  }
+}
+
 
 export function isAuthenticated(state) {
-    return false;
+  return true;
 }

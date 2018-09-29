@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Router, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import * as reducers from './redux/reducers';
+import * as reducers from './reducers/reducers';
 
 import history from './history';
 import './Root.sass';
