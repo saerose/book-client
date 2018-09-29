@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-// import { GoogleLogout } from 'react-google-login';
+import { GoogleLogout } from 'react-google-login';
 
 import '../components_sass/MenuProfile.sass';
 import home from '../assets/startup.svg';
 import scan from '../assets/qr-code.svg';
 import books from '../assets/menu-book.svg';
+import logout from '../assets/logout.svg';
 
 import MenuProfile from "./MenuProfile";
 
@@ -45,13 +46,20 @@ class Menu extends Component {
             <div className='flyoutMenu_li_name'>Library</div>
             </Link>
           </li>
+          <li className='flyoutMenu_li'>
+            <Link to='/login'>
+            <img className='flyoutMenu_li_img' alt='Books' src={logout} />
+            <div className='flyoutMenu_li_name'>Logout</div>
+            </Link>
+          </li>
         </div>
+{
+        //   <GoogleLogout
+        // buttonText="Logout"
+        // onLogoutSuccess={console.log(1)}
+        // />
 
-        {/* <GoogleLogout
-      buttonText="Logout"
-      onLogoutSuccess={logout}
-      /> */}
-
+}
       </div>
     )
   }

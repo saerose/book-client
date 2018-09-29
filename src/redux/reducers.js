@@ -15,10 +15,6 @@ const defaultUserState = {
   user: {}
 }
 
-// const defaultBookState = {
-//   book: []
-// }
-
 const onDetectedReducer = (state = defaultState, action) => {
   switch(action.type) {
     case ON_DETECTED:

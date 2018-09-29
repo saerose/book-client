@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { logIn } from '../redux/actions';
 import SearchBar from './SearchBar';
 import '../components_sass/Menu.sass';
 import '../components_sass/Home.sass';
@@ -8,20 +7,6 @@ import openBook from '../assets/open-book.svg';
 
 
 class Home extends Component {
-  loginGoogle = ({ profileObj }) => {
-    fetch('http://localhost:3001/login/google', {
-      method: 'POST',
-      headers: {
-        'Content-Type' : 'application/json'
-      },
-      body: JSON.stringify({profileObj})
-    })
-      .then(res => res.json())
-      .then(res => {
-        this.props.logIn(res)
-      })
-      .catch(err => console.error(err))
-  }
 
   render() {
 
@@ -48,7 +33,6 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  logIn: (user) => dispatch(logIn(user))
 })
 
 export default connect (mapStateToProps, mapDispatchToProps)(Home);

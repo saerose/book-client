@@ -3,19 +3,18 @@ import { Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import history from './history';
-import './App.sass';
+import './Root.sass';
 
 import Login from './components/auth/Login';
 import Signup from './components/auth/Signup';
 import ScannerDashboard from './components/ScannerDashboard';
 import Result from './components/Result';
 import Home from './components/Home';
-import SearchBar from './components/SearchBar';
 import SearchBarResults from './components/SearchBarResults';
 import LibraryDashboard from './components/LibraryDashboard';
 
 
-class App extends Component {
+class Root extends Component {
 
   showSettings (event) {
     event.preventDefault();
@@ -45,4 +44,4 @@ const mapStateToProps = (state) => ({
   user: state.userReducer.user
 })
 
-export default connect (mapStateToProps, null)(App);
+export default connect (mapStateToProps, null)(Root);
