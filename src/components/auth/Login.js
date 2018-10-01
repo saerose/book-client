@@ -32,7 +32,7 @@ class Login extends Component {
           <div className='Login_login_title'>minerva</div>
           <img className='Login_wrapper_login_img' alt='Pile of books' src={pileBooks} />
           <div className='Login_socialmedia_login_buttons'>
-            <div className='Login_login_wrapper_googlebutton'>
+            <div className='Login_login_wrapper_googlebutton' onClick={this.props.logInStandard}>
               <GoogleLogin
                 className ='Login_login_googlebutton'
                 clientId='673352715028-kbn3igi1c3sg2apmbf1vos7stdv8n406.apps.googleusercontent.com'
@@ -41,7 +41,7 @@ class Login extends Component {
                 onFailure={console.error}
               />
             </div>
-            <div className='Login_login_wrapper_facebookbutton'>
+            <div className='Login_login_wrapper_facebookbutton' onClick={this.props.logInStandard}>
               <GoogleLogin
                 className ='Login_login_facebookbutton'
                 clientId='673352715028-kbn3igi1c3sg2apmbf1vos7stdv8n406.apps.googleusercontent.com'
