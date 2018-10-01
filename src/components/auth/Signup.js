@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { logIn } from '../../actions/actions';
+import { logInGoogle } from '../../actions/actions';
 import GoogleLogin from 'react-google-login';
 import { Link } from 'react-router-dom';
 import '../../components_sass/Menu.sass';
@@ -20,7 +20,7 @@ class Signup extends Component {
     })
       .then(res => res.json())
       .then(res => {
-        this.props.logIn(res)
+        this.props.logInGoogle(res)
       })
       .catch(err => console.error(err))
   }
@@ -89,7 +89,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  logIn: (user) => dispatch(logIn(user))
+  logIn: (user) => dispatch(logInGoogle(user))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Signup);
