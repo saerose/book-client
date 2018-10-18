@@ -13,6 +13,12 @@ In order to test this web-app you will need to run the compatible backend, visit
 
 ## Built with
 
-- [React](https://reactjs.org/) - Web framework.
+- [React](https://reactjs.org/) — Web framework.
 
-- [Redux](https://redux.js.org/) - Used to interconnect and communicate different parts of the web-app.
+- [Redux](https://redux.js.org/) — Used to interconnect and communicate different parts of the web-app.
+
+### Next steps
+
+------
+
+Please feel free to follow us on [Minerva Books](https://github.com/Minerva-Books)
