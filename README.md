@@ -21,6 +21,10 @@ In order to test this web-app you will need to run the compatible backend, visit
 
 ------
 
+![Mesa de trabajo 2](https://i.imgur.com/ClWQiSH.png)
+
+![Mesa de trabajo 2-1](https://i.imgur.com/NNVOMLw.png)
+
 
 ### Next steps
 
