@@ -21,9 +21,6 @@ In order to test this web-app you will need to run the compatible backend, visit
 
 ------
 
-![Mesa de trabajo 2](minerva-client/src/assets/Mesa de trabajo 2.png)
-
-![Mesa de trabajo 2-1](minerva-client/src/assets/Mesa de trabajo 2-1.png)
 
 ### Next steps
 
