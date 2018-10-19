@@ -17,6 +17,14 @@ In order to test this web-app you will need to run the compatible backend, visit
 
 - [Redux](https://redux.js.org/) — Used to interconnect and communicate different parts of the web-app.
 
+### Screenshots
+
+------
+
+![Mesa de trabajo 2](/Users/saerose/coding/cw/cw-screencaps/Mesa de trabajo 2.png)
+
+![Mesa de trabajo 2-1](/Users/saerose/coding/cw/cw-screencaps/Mesa de trabajo 2-1.png)
+
 ### Next steps
 
 ------
