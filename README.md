@@ -16,7 +16,7 @@ Minerva is a PWA to keep track of your book library and find reviews for new boo
 <center>
   <table>
     <tr>
-      <td><img width="250" alt="lauragift21" src="https://user-images.githubusercontent.com/33838693/47258501-40167380-d49c-11e8-8200-d88edc3c6ba8.png"></td>
+      <td><img width="450" alt="lauragift21" src="https://user-images.githubusercontent.com/33838693/47258501-40167380-d49c-11e8-8200-d88edc3c6ba8.png"></td>
       <td><img width="450" alt="maracuja-juice" src="https://user-images.githubusercontent.com/33838693/47258502-40167380-d49c-11e8-9f5c-e3c96e8bd3ad.png"></td>
       <td><img width="450" alt="maracuja-juice" src="https://user-images.githubusercontent.com/33838693/47258503-40167380-d49c-11e8-8aac-3bb23bcf4f75.png"></td>
     </tr>
