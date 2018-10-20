@@ -16,14 +16,14 @@ Minerva is a PWA to keep track of your book library and find reviews for new boo
 <center>
   <table>
     <tr>
-      <td><img width="450" alt="lauragift21" src="https://user-images.githubusercontent.com/33838693/47258501-40167380-d49c-11e8-8200-d88edc3c6ba8.png"></td>
-      <td><img width="450" alt="maracuja-juice" src="https://user-images.githubusercontent.com/33838693/47258502-40167380-d49c-11e8-9f5c-e3c96e8bd3ad.png"></td>
-      <td><img width="450" alt="maracuja-juice" src="https://user-images.githubusercontent.com/33838693/47258503-40167380-d49c-11e8-8aac-3bb23bcf4f75.png"></td>
+      <td><img width="450" alt="lauragift21" src="https://user-images.githubusercontent.com/33838693/47258586-96d07d00-d49d-11e8-86d6-4bdc04f6c8e3.png"></td>
+      <td><img width="450" alt="maracuja-juice" src="https://user-images.githubusercontent.com/33838693/47258587-96d07d00-d49d-11e8-9bc5-1b042f8bef8c.png"></td>
+      <td><img width="450" alt="maracuja-juice" src="https://user-images.githubusercontent.com/33838693/47258588-96d07d00-d49d-11e8-901f-eb26bc01dc4b.png"></td>
     </tr>
     <tr>
-      <td><img width="450" alt="chdemko" src="https://user-images.githubusercontent.com/33838693/47258504-40167380-d49c-11e8-9c5c-045cb330c075.png"></td>
-      <td><img width="450" alt="chendaniely" src="https://user-images.githubusercontent.com/33838693/47258505-40af0a00-d49c-11e8-9960-e772c8c94778.png"></td>
-      <td><img width="450" alt="chendaniely" src="https://user-images.githubusercontent.com/33838693/47258506-40af0a00-d49c-11e8-84ab-88364592d006.png"></td>
+      <td><img width="450" alt="chdemko" src="https://user-images.githubusercontent.com/33838693/47258589-96d07d00-d49d-11e8-85f9-ba5d2de77332.png"></td>
+      <td><img width="450" alt="chendaniely" src="https://user-images.githubusercontent.com/33838693/47258590-96d07d00-d49d-11e8-8ed0-76f246c864bb.png"></td>
+      <td><img width="450" alt="chendaniely" src="https://user-images.githubusercontent.com/33838693/47258591-97691380-d49d-11e8-951f-c2ef581d3af5.png"></td>
     </tr>
 
   </table>
