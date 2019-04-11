@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-// import { GoogleLogout } from 'react-google-login';
-
+import { connect } from 'react-redux';
+import { logOutStandard } from '../actions/authActions';
 import '../components_sass/MenuProfile.sass';
 import home from '../assets/startup.svg';
 import scan from '../assets/qr-code.svg';
 import books from '../assets/menu-book.svg';
+import logout from '../assets/logout.svg';
 
 import MenuProfile from "./MenuProfile";
 
@@ -28,33 +29,41 @@ class Menu extends Component {
 
         <div className='flyoutMenu_divWrapper'>
           <li className='flyoutMenu_li'>
-            <Link to='/'>
+            <Link to='/home'>
               <img className='flyoutMenu_li_img' alt='Home' src={home} />
               <div className='flyoutMenu_li_name'>Home</div>
             </Link>
           </li>
           <li className='flyoutMenu_li'>
             <Link to='/scannerdashboard'>
-            <img className='flyoutMenu_li_img' alt='Scan' src={scan} />
-            <div className='flyoutMenu_li_name'>Scan</div>
+              <img className='flyoutMenu_li_img' alt='Scan' src={scan} />
+              <div className='flyoutMenu_li_name'>Scan</div>
             </Link>
           </li>
           <li className='flyoutMenu_li'>
             <Link to='/library'>
-            <img className='flyoutMenu_li_img' alt='Books' src={books} />
-            <div className='flyoutMenu_li_name'>Library</div>
+              <img className='flyoutMenu_li_img' alt='Books' src={books} />
+              <div className='flyoutMenu_li_name'>Library</div>
+            </Link>
+          </li>
+          <li className='flyoutMenu_li'>
+            <Link to='/login' onClick={this.props.logOutStandard}>
+              <img className='flyoutMenu_li_img' alt='Books' src={logout} />
+              <div className='flyoutMenu_li_name'>Logout</div>
             </Link>
           </li>
         </div>
-
-        {/* <GoogleLogout
-      buttonText="Logout"
-      onLogoutSuccess={logout}
-      /> */}
-
       </div>
     )
   }
 }
 
-export default Menu;
+
+const mapStateToProps = (state) => ({
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  logOutStandard: () => dispatch(logOutStandard()),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Menu);
